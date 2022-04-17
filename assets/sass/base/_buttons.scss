@@ -1,0 +1,34 @@
+.button {
+    padding: 1.1rem 2.5rem;
+    @extend %font-primary;
+    @include font($size: 1.6rem, $height: 2.2rem, $weight: 600);
+    border-radius: 4px;
+    cursor: pointer;
+    @extend %transition;
+
+    &_bordered {
+        background: $color-light;
+        border: 1px solid #BCD0E5;
+        color: #173A56;
+
+        &:hover {
+            background: #BCD0E5;
+        }
+    }
+
+    &_colored {
+        background: $color-primary;
+        border: 1px solid transparent;
+        color: $color-light;
+
+        &:hover {
+            background: $color-primary-active;
+        }
+    }
+}
+
+.link-button {
+    color: $color-primary;
+    @extend %font-additional;
+    @include font($size: 1.6rem, $height: 2.4rem, $weight: 600);
+}

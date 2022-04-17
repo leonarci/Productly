@@ -1,0 +1,34 @@
+.tools {
+    padding-bottom: 90px;
+    margin-bottom: 30px;
+}
+
+.tools__wrapper {
+    position: relative;
+}
+
+
+.tools__background {
+    position: absolute;
+    bottom: -90px;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 277px;
+    clip-path: ellipse(60% 200% at 50% 200%);
+    transform: rotate(180deg);
+    background: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%);
+    background-size: cover;
+}
+
+.tools__title {
+    max-width: 462px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.tools__button {
+    margin-top: 60px;
+    text-align: center;
+}

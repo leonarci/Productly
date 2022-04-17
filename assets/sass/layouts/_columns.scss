@@ -1,0 +1,11 @@
+.layout-4-columns {
+    @include columns ($columns: 4, $gap: 50px);
+}
+
+.layout-3-columns {
+    @include columns ($columns: 3, $row-gap: 30px, $column-gap: 30px);
+}
+
+.layout-2-columns {
+    @include columns ($columns: 2, $gap: 90px);
+}

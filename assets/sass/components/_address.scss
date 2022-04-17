@@ -1,0 +1,12 @@
+.address {
+    padding-top: 35px;
+}
+
+.address__line {
+    & a {
+        margin-bottom: 20px;
+        @include font ($size: 2.5rem, $height: 2.6rem, $weight: normal);
+        color: $color-text;
+        text-decoration: none;
+    }
+}

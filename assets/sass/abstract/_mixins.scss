@@ -1,0 +1,27 @@
+@mixin font ($size, $height:($size * 1.3), $weight: 700, $style: normal) {
+    font-size: $size;
+    line-height: $height;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin columns ($columns, $gap: 0, $row-gap: $gap, $column-gap: $gap, ) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $row-gap $column-gap;
+    // justify-content: space-between;
+
+    >* {
+        flex-basis: calc((100% - (#{$column-gap} * (#{$columns} - 1))) / #{$columns});
+    }
+}
+
+// @mixin columns ($width){
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+
+//     >* {
+//         flex-basis: $width;
+//     }
+// }

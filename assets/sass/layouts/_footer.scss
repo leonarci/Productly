@@ -1,0 +1,36 @@
+.footer__content {
+    padding: 60px 0;
+    display: flex;
+    gap: 12.5%;
+}
+
+.footer {
+    .layout-3-columns-f {
+        flex-grow: 2;
+        display: flex;
+        column-gap: 15%;
+    }
+}
+
+
+
+.footer__navigation {
+    .navigation {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigation__title {
+        margin: 0 0 15px;
+    }
+
+    .navigation__link {
+        display: block;
+        width: max-content;
+        @extend %font-additional;
+        @include font ($size: 1.6rem, $height: 2.6rem, $weight: normal);
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}

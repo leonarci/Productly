@@ -1,0 +1,25 @@
+.strategy {
+    display: flex;
+    flex-direction: column;
+    @extend %block-shadowed;
+    @extend %transition;
+
+    &:hover {
+        box-shadow: none;
+        cursor: pointer;
+
+        .strategy__title {
+            color: $color-primary;
+        }
+    }
+}
+
+.strategy__title {
+    width: 90%;
+    margin: 25px auto 0;
+    @extend %transition;
+}
+
+.strategy__tags {
+    margin: 20px;
+}

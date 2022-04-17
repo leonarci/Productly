@@ -1,0 +1,48 @@
+.icon {
+    display: inline-block;
+    cursor: pointer;
+
+    &_play {
+        width: 18px;
+        height: 19px;
+        background-image: url(../../assets/images/icons/play.svg);
+        vertical-align: sub;
+        margin-right: 10px;
+    }
+
+    &_phone {
+        width: 30px;
+        height: 30px;
+        background-image: url(../../assets/images/icons/phone.svg);
+        background-size: cover;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    &_mail {
+        width: 30px;
+        height: 30px;
+        background-image: url(../../assets/images/icons/mail.svg);
+        background-size: cover;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+}
+
+.icon-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 19px;
+    color: $color-light;
+
+    @each $name,
+    $color in $icon-colors {
+        &_#{$name} {
+            background-color: $color;
+        }
+    }
+}
