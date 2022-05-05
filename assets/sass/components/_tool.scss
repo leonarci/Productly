@@ -1,11 +1,28 @@
+.tool {
+    @include media-tablet {
+        text-align: center;
+    }
+}
+
 .tool__icon {
-    margin-bottom: 16px;
+    display: inline-block;
+    margin: 0 0 30px;
+
+    @include media-tablet {
+        text-align: center;
+        margin: 0 auto 20px;
+    }
 }
 
 .tool__title {
-    margin-bottom: 30px;
+    margin: 0 0 16px;
+
+    @include media-tablet {
+        margin-bottom: 6px;
+    }
 }
 
 .tool__text {
     font-weight: normal;
+    margin: 0;
 }

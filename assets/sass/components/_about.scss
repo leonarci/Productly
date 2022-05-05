@@ -1,5 +1,15 @@
 .about {
     padding: 60px 100px;
+
+    @include media-tablet {
+        text-align: center;
+
+        & .layout-3-columns {
+            flex-wrap: nowrap;
+            justify-content: center;
+            overflow: hidden;
+        }
+    }
 }
 
 .about__title {

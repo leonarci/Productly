@@ -2,19 +2,35 @@
     padding: 60px 0;
     display: flex;
     gap: 12.5%;
+
+    @include media-tablet {
+        padding: 50px 50px 25px;
+        flex-direction: column;
+        row-gap: 35px;
+    }
 }
 
 .footer {
-    .layout-3-columns-f {
-        flex-grow: 2;
-        display: flex;
-        column-gap: 15%;
+    .layout-3-columns {
+        flex-grow: 1;
+        @include columns ($columns: 3, $column-gap: 10%);
+
+        @include media-mobile {
+            flex-direction: column;
+            row-gap: 16px;
+
+            .navigation {
+                flex-basis: 100%;
+            }
+        }
     }
 }
 
 
 
 .footer__navigation {
+
+
     .navigation {
         flex-direction: column;
         margin: 0;
@@ -26,10 +42,8 @@
     }
 
     .navigation__link {
-        display: block;
-        width: max-content;
         @extend %font-additional;
-        @include font ($size: 1.6rem, $height: 2.6rem, $weight: normal);
+        @include font ($size: 1.6rem, $height: 3.5rem, $weight: normal);
         padding: 0;
         margin-bottom: 10px;
     }

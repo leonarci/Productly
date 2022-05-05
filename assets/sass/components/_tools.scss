@@ -1,31 +1,50 @@
 .tools {
     padding-bottom: 90px;
-    margin-bottom: 30px;
+    background: url(/assets/images/tools-background.png);
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+
+    @include media-tablet {
+        padding-bottom: 50px;
+    }
 }
 
 .tools__wrapper {
     position: relative;
-}
-
-
-.tools__background {
-    position: absolute;
-    bottom: -90px;
-    z-index: -1;
     overflow: hidden;
-    width: 100%;
-    height: 277px;
-    clip-path: ellipse(60% 200% at 50% 200%);
-    transform: rotate(180deg);
-    background: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%);
-    background-size: cover;
 }
+
+
+// .tools__background {
+//     position: absolute;
+//     bottom: -90px;
+//     z-index: -1;
+//     overflow: hidden;
+//     width: 100%;
+//     height: 277px;
+//     clip-path: ellipse(60% 200% at 50% 200%);
+//     transform: rotate(180deg);
+//     background: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%);
+//     background-size: cover;
+
+//     @include media-laptop {
+//         width: calc(100% - 92px);
+//     }
+// }
 
 .tools__title {
     max-width: 462px;
     margin: auto;
     text-align: center;
     margin-bottom: 70px;
+
+    @include media-tablet {
+        margin-bottom: 50px;
+    }
+
+    @include media-mobile {
+        margin-bottom: 43px;
+    }
 }
 
 .tools__button {

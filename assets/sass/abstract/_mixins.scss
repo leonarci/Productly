@@ -16,7 +16,7 @@
     }
 }
 
-// @mixin columns ($width){
+// @mixin columns ($width) {
 //     display: flex;
 //     flex-wrap: wrap;
 //     justify-content: space-between;
@@ -25,3 +25,27 @@
 //         flex-basis: $width;
 //     }
 // }
+
+@mixin media-laptop {
+    @media screen and (max-width: $content-width) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+    @media screen and (max-width: $mobile-big-width) {
+        @content;
+    }
+}
+
+@mixin media-mobile-small {
+    @media screen and (max-width: $mobile-small-width) {
+        @content;
+    }
+}

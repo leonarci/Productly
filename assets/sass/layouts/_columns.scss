@@ -1,11 +1,63 @@
 .layout-4-columns {
     @include columns ($columns: 4, $gap: 50px);
+
+    @include media-tablet {
+        @include columns ($columns: 2, $row-gap: 54px, $column-gap: 78px);
+    }
+
+    @include media-mobile {
+        display: flex;
+        flex-direction: column;
+        row-gap: 47px;
+    }
 }
 
 .layout-3-columns {
-    @include columns ($columns: 3, $row-gap: 30px, $column-gap: 30px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // row-gap: 30px;
+
+    >* {
+        flex-basis: 31%;
+
+        @include media-tablet {
+            flex-basis: 48%;
+        }
+
+        @include media-mobile {
+            flex-basis: 100%;
+        }
+
+        &:nth-child(4) {
+            flex-basis: 65%;
+
+            @include media-tablet {
+                flex-basis: 48%;
+            }
+
+            @include media-mobile {
+                flex-basis: 100%;
+            }
+        }
+
+    }
+
+
+    // @include columns ($columns: 3, $row-gap: 30px, $column-gap: 30px);
+    // // flex-basis: 30%;
+
+    // @include media-tablet {
+    //     @include columns ($columns: 2, $row-gap: 30px, $column-gap: 30px);
+    // }
+
 }
 
 .layout-2-columns {
     @include columns ($columns: 2, $gap: 90px);
+
+    @include media-tablet {
+        flex-direction: column;
+        row-gap: 34px;
+    }
 }
